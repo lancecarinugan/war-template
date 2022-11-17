@@ -1,3 +1,10 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Scanner;
+import java.text.NumberFormat;
+import java.io.IOException;
+import java.util.Locale;
+import java.text.DecimalFormat;
 
 /**
  * War game class
@@ -7,6 +14,10 @@
  */
 public class War
 {
+    private Deck deck;
+    Deck deck1, deck2;
+    boolean justWar;
+    ArrayList <Card> p1Pile, p2Pile;
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -15,7 +26,7 @@ public class War
     public War()
     {
         // Initializations here...
-        
+        deck.initializeNewDeck();
         
         // ...then run the event loop
         this.runEventLoop();
@@ -26,6 +37,10 @@ public class War
      * from the War flowchart you created for this game
      */
     public void runEventLoop() {
+        Scanner sc = new Scanner(System.in);
+        justWar = true;
+        p1Pile = new ArrayList<Card>();
+        p2Pile = new ArrayList<Card>();
 
     }
     
@@ -34,6 +49,7 @@ public class War
      */
     public static void main(String[] args) {
         War war = new War();
+        war.runEventLoop();
     }
 
 }
