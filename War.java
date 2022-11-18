@@ -14,10 +14,13 @@ import java.text.DecimalFormat;
  */
 public class War
 {
-    private Deck deck;
-    Deck deck1, deck2;
-    boolean justWar;
-    ArrayList <Card> p1Pile, p2Pile;
+    Card heartCard;
+    Card diamondCard;
+    Card spadeCard;
+    Card clubCard;
+    int countingPlays = 0;
+    
+    Scanner keyboard = new Scanner(System.in);
     /**
      * Constructor for the game
      * Include your initialization here -- card decks, shuffling, etc
@@ -26,8 +29,27 @@ public class War
     public War()
     {
         // Initializations here...
-        deck.initializeNewDeck();
         
+        // Creates a Deck Array
+        Deck deckOfCards = new Deck(); 
+    
+        // Creates Player 1's Deck
+        Deck p1Pile = new Deck();
+        
+        // Creates Player 2's Deck
+        Deck p2Pile = new Deck();
+        
+        Deck dealDeck;
+        
+        Deck shuffle;
+    
+        
+        for(int i = 2; i< 15; i++)
+        {
+                
+        }
+    
+
         // ...then run the event loop
         this.runEventLoop();
     }
@@ -37,10 +59,8 @@ public class War
      * from the War flowchart you created for this game
      */
     public void runEventLoop() {
-        Scanner sc = new Scanner(System.in);
-        justWar = true;
-        p1Pile = new ArrayList<Card>();
-        p2Pile = new ArrayList<Card>();
+        deckOfCards.shuffle();
+        System.out.println("Deal deck.." + dealDeck);
 
     }
     
