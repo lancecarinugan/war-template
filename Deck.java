@@ -15,7 +15,7 @@ import java.text.DecimalFormat;
 public class Deck
 {
     private List<Card> cards;
-    Deck deckOfCards = new Deck();
+    Deck theDeck = new Deck();
 
     /**
      * Deck constructor: Create an empty deck of cards
@@ -51,7 +51,7 @@ public class Deck
      */
     public void shuffle() {
         // To be written
-        deckOfCards.shuffle();
+        theDeck.shuffle();
     }
     
     /**
