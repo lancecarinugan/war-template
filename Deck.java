@@ -1,10 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.text.NumberFormat;
-import java.io.IOException;
-import java.util.Locale;
-import java.text.DecimalFormat;
+import java.util.*;
 
 /**
  * Emulate a deck of cards
@@ -15,8 +11,6 @@ import java.text.DecimalFormat;
 public class Deck
 {
     private List<Card> cards;
-    Deck deck = new Deck();
-
     /**
      * Deck constructor: Create an empty deck of cards
      */
@@ -51,7 +45,7 @@ public class Deck
      */
     public void shuffle() {
         // To be written
-        deck.shuffle();
+        Collections.shuffle(cards);
     }
     
     /**
