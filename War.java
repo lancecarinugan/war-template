@@ -41,12 +41,12 @@ public class War {
 
         // Gets and prints the size of both player's decks
         System.out.println ("Deck Count..");
-        System.out.println ("Player 1 Card Amount: " + player[0].getDeckSize());
-        System.out.println ("Player 2 Card Amount: " + player[0].getDeckSize());
+        System.out.println ("Player 1 Beginning Card Amount: " + player[0].getDeckSize());
+        System.out.println ("Player 2 Beginning Card Amount: " + player[0].getDeckSize());
         System.out.println();
         System.out.println ("BEGIN!");
         // If a player runs out of cards, the other wins automatically.
-        for (int turns = 0; turns <= 300; turns++) {
+        for (int turns = 1; turns <= 300; turns++) {
             if (player[0].getDeckSize() == 0) {
                 System.out.println ("Player 1 has ran out of cards, Player 2 WINS!");
                 break;
@@ -59,13 +59,11 @@ public class War {
                 System.out.println ("\n[Round: " + turns + "]");
                 Card card1 = player[0].dealCardFromDeck();
                 Card card2 = player[1].dealCardFromDeck();
-                System.out.println ("Player 1: " + card1.getFace() + " of " + card1.getSuit());
-                System.out.println ("Player 2: " + card2.getFace() + " of " + card2.getSuit());
+                System.out.println ("Player 1 drew: " + card1.getFace() + " of " + card1.getSuit());
+                System.out.println ("Player 2 drew: " + card2.getFace() + " of " + card2.getSuit());
                 if (card1.getRank() > card2.getRank()) {
                     player[0].addCardToDeck(card1);
                     player[0].addCardToDeck(card2);
-                    System.out.println ("Player 1 drew: " + card1);
-                    System.out.println ("Player 2 drew: " + card2);
                     System.out.println ("Player 1 Won the Battle!");
                 }
                 else if (card1.getRank() > card2.getRank()) {
