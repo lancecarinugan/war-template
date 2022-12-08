@@ -73,14 +73,32 @@ public class War {
                     System.out.println ("Player 2 drew: " + card2);
                     System.out.println ("Player 2 Won the Battle!");
                 }
-                else
+                else {
                     System.out.println ("A tie indeed. Begin the WAR!");
-                    ArrayList<String> warCards = new ArrayList<String>();  
-                    // Goal for 12/7/22
-                    // create a new array of war cards of 4 total
-                    // have each player draw a card
+                    Deck warCards = new Deck(); 
+                    warCards.addCardToDeck(card1);
+                    warCards.addCardToDeck(card2);
+                        if (player[0].getDeckSize() == 0) {
+                           System.out.println ("Player 1 has ran out of cards, Player 2 WINS!");
+                           break;
+                        }
+                        else if (player[1].getDeckSize() == 0) {
+                            System.out.println ("Player 2 has ran out of cards, Player 1 WINS!");
+                            break;
+                        }
+                        else { 
+                            for (int i = 0; i < 4; i++) { 
+                                card1 = player[0].dealCardFromDeck();
+                                card2 = player[1].dealCardFromDeck(); 
+                                warCards.addCardToDeck(card1);
+                                warCards.addCardToDeck(card2);
+                            }
+                        }
+                    // Goal for 12/8/22
                     // Display the drawn cards
                     // Determine who wins
+                    }
+                }
 
             if (turns >= 300) {
                 if (player[0].getDeckSize() > player[1].getDeckSize()) {
@@ -94,7 +112,7 @@ public class War {
                 }
             }
         }
-    }
+        
     /**
     * The main method is called when Java starts your program
     */
