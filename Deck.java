@@ -11,6 +11,8 @@ import java.util.*;
 public class Deck
 {
     private List<Card> cards;
+    private int topCard;
+    Card[] deck = new Card[52];
     /**
      * Deck constructor: Create an empty deck of cards
      */
@@ -71,7 +73,7 @@ public class Deck
      */
     public Card dealCardFromDeck() {
         // To be written 
-        return this.cards.remove(this.cards.size() -1);
+        return this.cards.remove(this.cards.size() - 1);
     }
     
     /**
