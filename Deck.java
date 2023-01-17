@@ -82,6 +82,8 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
+        if (!cards.isEmpty()) {
         this.cards.add(0, cardToAdd);
+    }
     }
 }
