@@ -12,7 +12,6 @@ public class Deck
 {
     private List<Card> cards;
     private int topCard;
-    Card[] deck = new Card[52];
     /**
      * Deck constructor: Create an empty deck of cards
      */
@@ -82,8 +81,6 @@ public class Deck
      */
     public void addCardToDeck(Card cardToAdd) {
         // To be written
-        if (!cards.isEmpty()) {
         this.cards.add(0, cardToAdd);
     }
     }
-}
